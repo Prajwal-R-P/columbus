@@ -2,23 +2,23 @@ import pygtk
 pygtk.require('2.0')
 import gtk
 
-class TextEntry:
+class TextEntry(gtk.Window):
 
     def close_application(self, widget):
         gtk.main_quit()
 
     def __init__(self):
+        super(TextEntry, self).__init__()
 
         # create a new window
-        app_window = gtk.Window(gtk.WINDOW_TOPLEVEL)
-        app_window.set_resizable(True)
-        app_window.set_border_width(10)
-        app_window.set_title("COLUMBUS - Discovering Composite Web Services")
-        app_window.connect("delete_event", lambda w,x: gtk.main_quit())
+        self.set_resizable(True)
+        self.set_border_width(10)
+        self.set_title("COLUMBUS - Discovering Composite Web Services")
+        self.connect("delete_event", lambda w,x: gtk.main_quit())
 
 	hbox_top = gtk.HBox(False, 0)
         vbox_a = gtk.VBox(False, 0)
-        app_window.add(vbox_a)
+        self.add(vbox_a)
         label_a = gtk.Label("Enter text1: ")
         label_a.show()
         vbox_a.pack_start(label_a, False, False, 0)
@@ -40,7 +40,7 @@ class TextEntry:
 
         # Text label
         vbox_b = gtk.VBox(False, 0)
-        app_window.add(vbox_b)
+        self.add(vbox_b)
         label_b = gtk.Label("Enter text2: ")
         label_b.show()
         vbox_b.pack_start(label_b, False, False, 0)
@@ -62,7 +62,7 @@ class TextEntry:
 
         # Text label
         vbox_c = gtk.VBox(False, 0)
-        app_window.add(vbox_c)
+        self.add(vbox_c)
         label_c = gtk.Label("Enter text3: ")
         label_c.show()
         vbox_c.pack_start(label_c, False, False, 0)
@@ -84,7 +84,7 @@ class TextEntry:
 
         # Text label
         vbox_d = gtk.VBox(False, 0)
-        app_window.add(vbox_d)
+        self.add(vbox_d)
         label_d = gtk.Label("Enter text4: ")
         label_d.show()
         vbox_d.pack_start(label_d, False, False, 0)
@@ -106,7 +106,7 @@ class TextEntry:
 
         # Text label
         vbox_e = gtk.VBox(True, 3)
-        app_window.add(vbox_e)
+        self.add(vbox_e)
 
 
         button_a = gtk.Button("close")
@@ -120,14 +120,14 @@ class TextEntry:
         halign.add(button_a)
         vbox_e.pack_start(halign, False, False, 3)
         self.fixed = gtk.Fixed()
-        app_window.add(self.fixed)
+        self.add(self.fixed)
         self.fixed.show()
         self.fixed.put(button_a,60,40)
 
 
         # Text label
         vbox_f = gtk.VBox(False, 0)
-        app_window.add(vbox_f)
+        self.add(vbox_f)
 	image = gtk.Image()
  	pixbuf = gtk.gdk.pixbuf_new_from_file("joker.jpg")
   	scaled_buf = pixbuf.scale_simple(250,250,gtk.gdk.INTERP_BILINEAR)
@@ -138,7 +138,7 @@ class TextEntry:
 
         # Text label
         vbox_g = gtk.VBox(False, 0)
-        app_window.add(vbox_g)
+        self.add(vbox_g)
 
         button_b = gtk.Button("close")
         button_b.connect("clicked", self.close_application)
@@ -173,8 +173,8 @@ class TextEntry:
 	hbox_top.show()
 
 	color = gtk.gdk.color_parse('#ffffff')
-	app_window.modify_bg(gtk.STATE_NORMAL, color)
-        app_window.show()
+	self.modify_bg(gtk.STATE_NORMAL, color)
+        self.show()
 
         self.result_label = label_a
         return
