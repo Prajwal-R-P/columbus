@@ -105,7 +105,7 @@ class TextEntry:
 
 
         # Text label
-        vbox_e = gtk.VBox(True, 3)
+        vbox_e = gtk.VBox(False, 0)
         app_window.add(vbox_e)
 
 
