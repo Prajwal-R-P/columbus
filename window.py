@@ -11,10 +11,10 @@ class TextEntry:
 
         # create a new window
         app_window = gtk.Window(gtk.WINDOW_TOPLEVEL)
-        app_window.resize(1000, 1000)
+        app_window.set_resizable(True)
         app_window.set_border_width(10)
         app_window.set_title("COLUMBUS - Discovering Composite Web Services")
-        app_window.connect("delete_event", lambda w: gtk.main_quit())
+        app_window.connect("delete_event", lambda w,x: gtk.main_quit())
 
 	hbox_top = gtk.HBox(False, 0)
         vbox_a = gtk.VBox(False, 0)
