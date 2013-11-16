@@ -171,7 +171,6 @@ class TextEntry:
         vbox_a.pack_start(vbox_g, False, False, 0)
 
 	hbox_top.pack_start(vbox_a, False, False, 0)
-        app_window.add(hbox_top)
 
         vbox_a.show()
         vbox_b.show()
@@ -182,6 +181,7 @@ class TextEntry:
         vbox_g.show()
 
 	hbox_top.show()
+        app_window.add(hbox_top)
 
 	color = gtk.gdk.color_parse('#ffffff')
 	app_window.modify_bg(gtk.STATE_NORMAL, color)
