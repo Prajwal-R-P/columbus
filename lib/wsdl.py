@@ -13,8 +13,8 @@ class Wsdl():
         data = {}
         for portType in self.getElementsByTagName(self.tree, "portType"):
             port = dict()
-            data['name'] = portType.getAttributeNode("name").nodeValue
             for operation in self.getElementsByTagName(portType, "operation"):
+                port['operation'] = operation.getAttributeNode("name").nodeValue
                 input_message = self.getElementsByTagName(operation, "input")[0].getAttributeNode("message").nodeValue.split(":")[-1]
                 output_message = self.getElementsByTagName(operation, "output")[0].getAttributeNode("message").nodeValue.split(":")[-1]
                 port['input'] = self.getElementsByMessage(input_message)
@@ -46,27 +46,17 @@ class Wsdl():
                 for part in self.getElementsByTagName(message_element, "part"):
                     part_data = dict()
                     part_data['name'] = part.getAttributeNode("name").nodeValue
-                    #
+
+                    type = part.getAttributeNode("type").nodeValue.split(":")[-1]
+                    part_data['nodes'] = self.getComplexTypeNodes(type)
                     # part_data['type'] = part.getAttributeNode("type").nodeValue.split(":")[-1]
                     data.append(part_data)
         return data
 
-        #def get_all_tokens(self):
-        #    service_tokens = get_tokens(self.service)
-        #    operation_tokens = []
-        #    message_tokens = []
-        #    type_tokens = []
-        #    for operation in [y for y in [get_tokens(x['name']) for x in self.operation]]:
-        #        for sub_operation in operation:
-        #            operation_tokens.append(sub_operation)
-        #    for message in [x['input'] for x in self.operation] + [x['output'] for x in self.operation]:
-        #        for sub_message in message:
-        #            message_tokens += get_tokens(sub_message['name'])
-        #    for _type in [x['input'] for x in self.operation] + [x['output'] for x in self.operation]:
-        #        for sub_type in _type:
-        #            type_tokens += get_tokens(sub_type['type'])
-        #    documentation_token = lexical_analyzer(self.documentation)
-        #    all_tokens = service_tokens + operation_tokens + message_tokens + type_tokens + documentation_token['NP'] +
-        #                 documentation_token['NN'] + documentation_token['VB']
-        #    #NOTE THAT DOCUMENTATION IS A DICTIONARY NOT AN ARRAY
-        #    return all_tokens, service_tokens, operation_tokens, message_tokens, type_tokens, documentation_token
+    def getComplexTypeNodes(self,tag):
+        data = []
+        for complex_type in self.getElementsByTagName(self.tree, "complexType"):
+            if complex_type.getAttributeNode('name').nodeValue == tag:
+                for element in self.getElementsByTagName(complex_type,"element"):
+                    data.append(element.getAttributeNode("name").nodeValue)
+        return data

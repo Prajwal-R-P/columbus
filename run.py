@@ -1,4 +1,7 @@
 from lib.wsdl import Wsdl
 import config
-wsdl=Wsdl(config.res+"test.wsdl")
-print wsdl.operation
+import os
+for file in os.listdir(config.res+"/wsdl"):
+    wsdl=Wsdl(config.res+"/wsdl/"+file)
+    print wsdl.operation
+    exit()
