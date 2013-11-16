@@ -7,15 +7,15 @@ class TextEntry:
     def close_application(self, widget):
         gtk.main_quit()
 
-    def get_val(self):
+    def get_val(self,widget):
         input = self.entry_a.get_text()
-        entry_a.set_text("")
+        self.entry_a.set_text("")
         output = self.entry_b.get_text()
-        entry_b.set_text("")
+        self.entry_b.set_text("")
         operation = self.entry_c.get_text()
-        entry_c.set_text("")
+        self.entry_c.set_text("")
         misc = self.entry_d.get_text()
-        entry_d.set_text("")
+        self.entry_d.set_text("")
 
     def __init__(self):
 
@@ -29,7 +29,8 @@ class TextEntry:
 	hbox_top = gtk.HBox(False, 0)
         vbox = gtk.VBox(False, 0)
         vbox_a = gtk.VBox(False, 0)
-        hbox_top.add(vbox_a)
+#        hbox_top.add(vbox_a)
+        app_window.add(vbox_a)
         label_a = gtk.Label("Enter text1: ")
         label_a.show()
         vbox_a.pack_start(label_a, False, False, 0)
@@ -51,7 +52,8 @@ class TextEntry:
 
         # Text label
         vbox_b = gtk.VBox(False, 0)
-        hbox_top.add(vbox_b)
+#        hbox_top.add(vbox_b)
+        app_window.add(vbox_b)
         label_b = gtk.Label("Enter text2: ")
         label_b.show()
         vbox_b.pack_start(label_b, False, False, 0)
@@ -73,7 +75,8 @@ class TextEntry:
 
         # Text label
         vbox_c = gtk.VBox(False, 0)
-        hbox_top.add(vbox_c)
+#        hbox_top.add(vbox_c)
+        app_window.add(vbox_c)
         label_c = gtk.Label("Enter text3: ")
         label_c.show()
         vbox_c.pack_start(label_c, False, False, 0)
@@ -95,7 +98,8 @@ class TextEntry:
 
         # Text label
         vbox_d = gtk.VBox(False, 0)
-        hbox_top.add(vbox_d)
+#        hbox_top.add(vbox_d)
+        app_window.add(vbox_d)
         label_d = gtk.Label("Enter text4: ")
         label_d.show()
         vbox_d.pack_start(label_d, False, False, 0)
@@ -117,28 +121,26 @@ class TextEntry:
 
         # Text label
         vbox_e = gtk.VBox(True, 3)
-        hbox_top.add(vbox_e)
+#        hbox_top.add(vbox_e)
+        app_window.add(vbox_e)
 
 
-        self.button_a = gtk.Button("close")
-        self.button_a.connect("clicked", self.close_application)
+        self.button_a = gtk.Button("Enter")
+        self.button_a.connect("clicked", self.get_val)
         vbox_e.pack_start(self.button_a, True, True, 0)
-        self.button_a.set_flags(gtk.CAN_DEFAULT)
         self.button_a.set_size_request(60,40)
+        self.button_a.set_flags(gtk.CAN_DEFAULT)
         self.button_a.grab_default()
         self.button_a.show()
-        halign=gtk.Alignment(1,0,0,0)
-        halign.add(self.button_a)
-        vbox_e.pack_start(halign, False, False, 3)
-        self.fixed = gtk.Fixed()
-        hbox_top.add(self.fixed)
-        self.fixed.show()
-        self.fixed.put(self.button_a,60,40)
+        halign_a=gtk.Alignment(1,0,0,0)
+        halign_a.add(self.button_a)
+        vbox_e.pack_start(halign_a, False, False, 3)
 
 
         # Text label
         vbox_f = gtk.VBox(False, 0)
-        hbox_top.add(vbox_f)
+        app_window.add(vbox_f)
+#        hbox_top.add(vbox_f)
 	self.image = gtk.Image()
  	pixbuf = gtk.gdk.pixbuf_new_from_file("joker.jpg")
   	scaled_buf = pixbuf.scale_simple(250,250,gtk.gdk.INTERP_BILINEAR)
@@ -147,18 +149,21 @@ class TextEntry:
 	vbox_f.pack_start(self.image, False, False, 0)
 
 
-        # Text label
-        vbox_g = gtk.VBox(False, 0)
-        hbox_top.add(vbox_g)
+        vbox_g = gtk.VBox(True, 3)
+#        hbox_top.add(vbox_g)
+        app_window.add(vbox_g)
 
-        self.button_b = gtk.Button("close")
-        self.button_b.connect("clicked", self.close_application)
+
+        self.button_b = gtk.Button("Enter")
+        self.button_b.connect("clicked", self.get_val)
         vbox_g.pack_start(self.button_b, True, True, 0)
         self.button_b.set_size_request(60,40)
         self.button_b.set_flags(gtk.CAN_DEFAULT)
         self.button_b.grab_default()
         self.button_b.show()
-        vbox_g.pack_start(self.button_b, False, False, 0)
+        halign_b=gtk.Alignment(1,0,0,0)
+        halign_b.add(self.button_b)
+        vbox_g.pack_start(halign_b, False, False, 3)
 
 
 
@@ -181,7 +186,7 @@ class TextEntry:
         vbox_g.show()
 
 	hbox_top.show()
-        app_window.add(hbox_top)
+#        app_window.add(hbox_top)
 
 	color = gtk.gdk.color_parse('#ffffff')
 	app_window.modify_bg(gtk.STATE_NORMAL, color)
