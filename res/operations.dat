@@ -1,0 +1,8 @@
+(lp0
+S'get_BOOK 1'
+p1
+aS'get_BOOK_AUTHOR 2'
+p2
+aS'get_ADDRESS 3'
+p3
+a.

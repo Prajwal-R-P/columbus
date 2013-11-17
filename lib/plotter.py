@@ -107,9 +107,27 @@ class Plot():
         _file=open(config.SDG,"w")
         pickle.dump(self.G,_file)
 
+        _file=open(config.OPERATION_NODES,"w")
+        pickle.dump(self.operation_nodes,_file)
+
+        _file=open(config.INPUT_NODES,"w")
+        pickle.dump(self.input_nodes,_file)
+
+        _file=open(config.OUTPUT_NODES,"w")
+        pickle.dump(self.output_nodes,_file)
+
     def get_sdg(self):
         _file=open(config.SDG,"r")
         self.G=pickle.load(_file)
+
+        _file=open(config.OPERATION_NODES,"r")
+        self.operation_nodes=pickle.load(_file)
+
+        _file=open(config.INPUT_NODES,"r")
+        self.input_nodes=pickle.load(_file)
+
+        _file=open(config.OUTPUT_NODES,"r")
+        self.output_nodes=pickle.load(_file)
 
     def get_subgraph(self,input_feed,output_feed):
         input_seeds=self.get_seed_nodes(input_feed,True)
