@@ -27,7 +27,6 @@ class TextEntry:
         app_window.connect("delete_event", lambda w,x: gtk.main_quit())
 
 	vbox_top = gtk.VBox(False, 0)
-#        vbox_top = gtk.VBox(False, 0)
         vbox_a = gtk.VBox(False, 0)
         vbox_top.add(vbox_a)
 #        app_window.add(vbox_a)
