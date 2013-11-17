@@ -2,6 +2,7 @@ from text import Word
 import copy
 import sqlite3
 from config import DB
+import splitter
 
 class Similarity():
     def __init__(self,sentence1,sentence2):
@@ -86,7 +87,7 @@ class Similarity():
     @staticmethod
     def get_tokens(string):
         #remove spaces in begining and ending places
-        string=str(string).strip().replace("\n"," ")
+        string=str(string).strip().replace("\n"," ").replace("-","%")
         string=string.replace("@","%").replace("_","%").replace(" ","%")
         for char in range(ord('A'),ord('Z')+1):
             string=string.replace(chr(char),"%"+chr(char))
@@ -132,7 +133,18 @@ class Similarity():
             if delete in tokens:
                 tokens.remove(delete)
 
-        return filter(None,list(set(tokens)))
+        result=[]
+        for token in tokens:
+            token=token.lower()
+            result.extend(splitter.infer_spaces(token).split(" "))
+
+        # remove stop words
+        for token in copy.deepcopy(result):
+            if token in ['has','or','type','by','a','is','an','it','at','which','that','on','the','and',"soap","service","for","of","to","in","ing","exp","rec","non","dati","ment"]:
+                result.remove(token)
+
+        return filter(None,list(set(result)))
+        # return filter(None,list(set(tokens)))
 
     def get_from_db(self,string1,string2):
         connect=sqlite3.connect(DB)

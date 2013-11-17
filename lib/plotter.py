@@ -63,7 +63,7 @@ class Plot():
     def wsdl_connect(self,wsdl_input,wsdl_output):
         input_operation=wsdl_input.operation()
         output_operation=wsdl_output.operation()
-        print input_operation['nodes']['operation'],output_operation['nodes']['operation']
+        print wsdl_input.id,wsdl_output.id
         input_nodes=[]
         for __input__ in input_operation['nodes']['input']:
             input_nodes.append(__input__['name'])
