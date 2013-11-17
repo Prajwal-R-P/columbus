@@ -82,7 +82,7 @@ class Similarity():
         if len(words2) > 0:
             result /= len(words2)
 
-        return max(result,result_old)
+        return min(result,result_old)
 
     @staticmethod
     def get_tokens(string):
