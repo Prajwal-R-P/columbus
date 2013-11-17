@@ -1,14 +1,28 @@
 from text import Word
 import copy
+import sqlite3
+from config import DB
 
 class Similarity():
     def __init__(self):
         pass
 
-    @staticmethod
-    def words(word1,word2):
-        word1 = Word(word1.lower())
-        word2 = Word(word2.lower())
+    def words(self,word1,word2):
+        word1=word1.lower()
+        word2=word2.lower()
+        if word1==word2:
+            return 0
+        #if already in database return
+        similarity_pre_calculated=self.get_from_db(word1,word2)
+        if similarity_pre_calculated in ["-2","-2.0",-2.0]:
+            return 0
+        elif similarity_pre_calculated:
+            return similarity_pre_calculated
+
+        string1=word1
+        string2=word2
+        word1 = Word(word1)
+        word2 = Word(word2)
         result = 0
 
         for synset1 in word1.synsets:
@@ -32,10 +46,15 @@ class Similarity():
         if len(word2.synsets) > 0:
             result /= len(word2.synsets)
 
-        return max(result,result_old)
+        result = max(result,result_old)
+        if result == 0:
+            self.new_db_entry(string1,string2,"-2")
+        else:
+            self.new_db_entry(string1,string2,result)
 
-    @staticmethod
-    def sentences(sentence1,sentence2):
+        return result
+
+    def sentences(self,sentence1,sentence2):
         words1 = Similarity.get_tokens(sentence1)
         words2 = Similarity.get_tokens(sentence2)
 
@@ -44,7 +63,7 @@ class Similarity():
         for word1 in words1:
             _max = 0
             for word2 in words2:
-                _max = max(Similarity.words(word1,word2),_max)
+                _max = max(self.words(word1,word2),_max)
             result += _max
 
         if len(words1) > 0:
@@ -56,7 +75,7 @@ class Similarity():
         for word2 in words2:
             _max = 0
             for word1 in words1:
-                _max = max(Similarity.words(word1,word2),_max)
+                _max = max(self.words(word1,word2),_max)
             result += _max
 
         if len(words2) > 0:
@@ -77,7 +96,7 @@ class Similarity():
 
         # remove stop words
         for token in copy.deepcopy(tokens):
-            if token in 'for a of the and to in'.split():
+            if token in ['a','is','an','it','at','which','that','on','the','and',"soap","service","for","of","to","in","ing","exp","rec","non","dati","ment"]:
                 tokens.remove(token)
 
         #merge CAPS
@@ -115,51 +134,19 @@ class Similarity():
 
         return filter(None,list(set(tokens)))
 
+    def get_from_db(self,string1,string2):
+        connect=sqlite3.connect(DB)
+        cursor=connect.cursor()
+        cursor.execute("select distance from ngd where (word1='"+string1+"' and word2='"+string2+"') or (word1='"+string2+"' and word2='"+string1+"')")
+        data=cursor.fetchone()
+        if data is None:
+            return None
+        else:
+            return float(data[0])
 
-#from gensim import corpora, models, similarities
-#
-#def compute(key):
-#    #documents = ["Human machine interface for lab abc computer applications",
-#    #             "A survey of user opinion of computer system response time", "The EPS user interface management system",
-#    #             "System and human system engineering testing of EPS",
-#    #             "Relation of user perceived response time to error measurement",
-#    #             "The generation of random binary unordered trees", "The intersection graph of paths in trees",
-#    #             "Graph minors IV Widths of trees and well quasi ordering", "Graph minors A survey"]
-#    documents = ["read book", "book ticket"]
-#
-#    # remove common words and tokenize
-#    stoplist = set('for a of the and to in'.split())
-#    texts = [[word for word in document.lower().split() if word not in stoplist]
-#             for document in documents]
-#
-#    print "a", texts
-#
-#    # remove words that appear only once
-#    #all_tokens = sum(texts, [])
-#    #tokens_once = set(word for word in set(all_tokens) if all_tokens.count(word) == 1)
-#    #texts = [[word for word in text if word not in tokens_once]
-#    #         for text in texts]
-#
-#    dictionary = corpora.Dictionary(texts)
-#    #dictionary.save('/tmp/deerwester.dict') # store the dictionary, for future reference
-#
-#    #new_doc = "Human computer interaction"
-#    #new_vec = dictionary.doc2bow(new_doc.lower().split())
-#
-#    corpus = [dictionary.doc2bow(text) for text in texts]
-#    #corpora.MmCorpus.serialize('/tmp/deerwester.mm', corpus) # store to disk, for later use
-#
-#    lsi = models.LsiModel(corpus, id2word=dictionary, num_topics=2) # 2 dim lsi space
-#
-#    doc = "book flight"
-#    vec_bow = dictionary.doc2bow(doc.lower().split())
-#    vec_lsi = lsi[vec_bow]
-#
-#    index = similarities.MatrixSimilarity(lsi[corpus]) # transform corpus to LSI space and index it
-#    index.save('/tmp/deerwester.index')
-#    index = similarities.MatrixSimilarity.load('/tmp/deerwester.index')
-#    sims = index[vec_lsi]
-#    #sims = sorted(enumerate(sims), key=lambda item: -item[1]) # this will have the answer
-#    print(sims)
-#
-#compute("Human computer interaction")
+
+    def new_db_entry(self,string1,string2,distance):
+        connect=sqlite3.connect(DB)
+        cursor=connect.cursor()
+        cursor.execute("insert into ngd values('"+string1+"','"+string2+"',"+str(distance)+")")
+        connect.commit()
