@@ -138,7 +138,6 @@ class TextEntry:
 
         # Text label
         vbox_f = gtk.VBox(False, 0)
-#        app_window.add(vbox_f)
         vbox_top.add(vbox_f)
 	self.image = gtk.Image()
  	pixbuf = gtk.gdk.pixbuf_new_from_file("joker.jpg")
