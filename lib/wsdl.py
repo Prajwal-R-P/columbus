@@ -1,10 +1,11 @@
 import xml.dom.minidom as dom
 
 class Wsdl():
-    def __init__(self, wsdl):
+    def __init__(self, wsdl,id):
         self.tree = dom.parse(wsdl)
         self.file_name = wsdl
-        self.operation = self.operation()
+        self.nodes = self.operation()
+        self.id = id
         #self.documentation = self.documentation()
         #self.all_tokens, self.service_tokens, self.operation_tokens, self.message_tokens, self.type_tokens, self.documentation_token = self.get_all_tokens()
 

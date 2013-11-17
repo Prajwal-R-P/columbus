@@ -1,4 +1,4 @@
 res = "res/"
 
-threshold=0.5
+threshold=0.6
 DB=res+"ngd.db"

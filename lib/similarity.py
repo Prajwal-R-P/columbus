@@ -4,14 +4,14 @@ import sqlite3
 from config import DB
 
 class Similarity():
-    def __init__(self):
-        pass
+    def __init__(self,sentence1,sentence2):
+        self.value=self.sentences(sentence1,sentence2)
 
     def words(self,word1,word2):
         word1=word1.lower()
         word2=word2.lower()
         if word1==word2:
-            return 0
+            return 1.0
         #if already in database return
         similarity_pre_calculated=self.get_from_db(word1,word2)
         if similarity_pre_calculated in ["-2","-2.0",-2.0]:
