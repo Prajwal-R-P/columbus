@@ -63,7 +63,7 @@ class Plot():
     def wsdl_connect(self,wsdl_input,wsdl_output):
         input_operation=wsdl_input.operation()
         output_operation=wsdl_output.operation()
-        print input_operation,output_operation
+        print input_operation['nodes']['operation'],output_operation['nodes']['operation']
         input_nodes=[]
         for __input__ in input_operation['nodes']['input']:
             input_nodes.append(__input__['name'])
@@ -78,7 +78,6 @@ class Plot():
 
         for input_node in input_nodes:
             for output_node in output_nodes:
-                print Similarity(input_node,output_node).value, input_node,output_node
                 if Similarity(input_node,output_node).value > config.threshold:
                 #if True:
                     print "DRAW",input_node, output_node
