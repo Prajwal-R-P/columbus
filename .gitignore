@@ -1,6 +1,3 @@
-.idea
-<<<<<<< HEAD
-=======
-*.pyc
-*~
->>>>>>> 56b54adb5bfc7b2fcc9c6de5b87902508cc5d34c
++.idea
++*.pyc
++*~
