@@ -1,10 +1,694 @@
 (lp0
-S'_BOOK 1'
+S'_PRICE 1'
 p1
-aS'_BOOK 2'
+aS'currency 1'
 p2
-aS'_AUTHOR 2'
+aS'amount 1'
 p3
-aS'_ADDRESS 3'
+aS'_LUXURYHOTEL 2'
 p4
+aS'luxuryHotelID 2'
+p5
+aS'hasRating 2'
+p6
+aS'_PRICE 3'
+p7
+aS'currency 3'
+p8
+aS'amount 3'
+p9
+aS'_ACCOMODATION 4'
+p10
+aS'_FILM 5'
+p11
+aS'Title 5'
+p12
+aS'_PROFESSOR-IN-ACADEMIA 6'
+p13
+aS'_PERSON 7'
+p14
+aS'_PRICE 8'
+p15
+aS'currency 8'
+p16
+aS'amount 8'
+p17
+aS'_ZIPCODE 9'
+p18
+aS'_AREACODE 9'
+p19
+aS'_LATITUDE 9'
+p20
+aS'_LONGITUDE 9'
+p21
+aS'UpdatePatientMedicalRecords_Acknowledgement 10'
+p22
+aS'_DIAGNOSTICPROCESS 11'
+p23
+aS'_TIMEMEASURE 11'
+p24
+aS'_COFFEE 12'
+p25
+aS'_WHISKEY 12'
+p26
+aS'_HOTEL 13'
+p27
+aS'_DISTANCE 14'
+p28
+aS'_DIAGNOSTICPROCESS 15'
+p29
+aS'_TIMEDURATION 15'
+p30
+aS'_POSTAL-ADDRESS 16'
+p31
+aS'_BOOK 17'
+p32
+aS'has-publication-reference 17'
+p33
+aS'CheckEquipmentAvailability_AvailabilityResponse 18'
+p34
+aS'_LOCATION 19'
+p35
+aS'_LATITUDE 19'
+p36
+aS'_LONGITUDE 19'
+p37
+aS'_COFFEE 20'
+p38
+aS'_TEA 20'
+p39
+aS'_REPORT 20'
+p40
+aS'_PUBLICATION 21'
+p41
+aS'has-publication-reference 21'
+p42
+aS'cites-publication-reference 21'
+p43
+aS'_AUTHOR 21'
+p44
+aS'_PRICE 22'
+p45
+aS'currency 22'
+p46
+aS'amount 22'
+p47
+aS'_QUANTITY 22'
+p48
+aS'_HOTEL 23'
+p49
+aS'_EXPERIMENTING 24'
+p50
+aS'experimentalControl 24'
+p51
+aS'_DISTANCE 25'
+p52
+aS'_DIAGNOSTICPROCESS 26'
+p53
+aS'_COST 26'
+p54
+aS'_RESEARCHER 27'
+p55
+aS'_INTENTIONALPSYCHOLOGICALPROCESS 28'
+p56
+aS'_SUMMARY 28'
+p57
+aS'_LATITUDE 29'
+p58
+aS'_LONGITUDE 29'
+p59
+aS'_FOOD 30'
+p60
+aS'_QUANTITY 30'
+p61
+aS'_MAP 31'
+p62
+aS'_TAXFREEPRICE 32'
+p63
+aS'_QUANTITY 32'
+p64
+aS'_SKILLEDOCCUPATION 33'
+p65
+aS'_HOTEL 34'
+p66
+aS'_POSTALCODE 35'
+p67
+aS'_TIMEZONE 35'
+p68
+aS'_STATE 35'
+p69
+aS'_MATCHED-CITY 35'
+p70
+aS'hasAirport 35'
+p71
+aS'_COUNTRY 35'
+p72
+aS'hasGovernment 35'
+p73
+aS'hasCurrency 35'
+p74
+aS'countryID 35'
+p75
+aS'CheckRoomAvailability_AvailabilityResponse 36'
+p76
+aS'_TOTAL-DISTANCE 37'
+p77
+aS'_TOTAL-DRIVING-TIME 37'
+p78
+aS'_DIRECTIONS 37'
+p79
+aS'_MAP 37'
+p80
+aS'_MEDICALDOCTOR 38'
+p81
+aS'_HOTEL 39'
+p82
+aS'_PURCHASEABLEITEM 40'
+p83
+aS'_PRICE 40'
+p84
+aS'currency 40'
+p85
+aS'amount 40'
+p86
+aS'_LECTURER-IN-ACADEMIA 41'
+p87
+aS'ProvideMedicalFlightInformation_ListOfFlights 42'
+p88
+aS'ListOfFlights_consistsOf 42'
+p89
+aS'_COMEDYFILM 43'
+p90
+aS'_FANTACYFILM 43'
+p91
+aS'_LATITUDE 44'
+p92
+aS'_LONGITUDE 44'
+p93
+aS'_PLACE 44'
+p94
+aS'_POSTALCODE 45'
+p95
+aS'_TIMEZONE 45'
+p96
+aS'_AREA-PHONECODE 45'
+p97
+aS'_LATITUDE 45'
+p98
+aS'_LONGITUDE 45'
+p99
+aS'_COUNTY 45'
+p100
+aS'CheckCostAndHealingPlan_AcceptanceAnswer 46'
+p101
+aS'BookMedicalTransport_SeatNumber 47'
+p102
+aS'BookMedicalTransport_BookingNumber 47'
+p103
+aS'_ELEVATION 48'
+p104
+aS'_DIAGNOSTICPROCESS 49'
+p105
+aS'_ADDRESS 50'
+p106
+aS'address-building 50'
+p107
+aS'address-street 50'
+p108
+aS'address-number 50'
+p109
+aS'address-country 50'
+p110
+aS'address-postcode 50'
+p111
+aS'address-city-or-village 50'
+p112
+aS'address-pretty-label 50'
+p113
+aS'address-area 50'
+p114
+aS'address-region 50'
+p115
+aS'_ORGANIZATION 51'
+p116
+aS'_OCCUPATIONALTRADE 51'
+p117
+aS'_BOOK 52'
+p118
+aS'has-publication-reference 52'
+p119
+aS'_AUTHOR 52'
+p120
+aS'_MAXPRICE 53'
+p121
+aS'_QUANTITY 53'
+p122
+aS'_LATITUDE 54'
+p123
+aS'_LONGITUDE 54'
+p124
+aS'_ADDRESS 54'
+p125
+aS'_POSTAL-ADDRESS 55'
+p126
+aS'_ALTITUDE 56'
+p127
+aS'_BREADORBISCUIT 57'
+p128
+aS'_QUANTITY 57'
+p129
+aS'_ACCOMMODATION 58'
+p130
+aS'_PRICE 59'
+p131
+aS'currency 59'
+p132
+aS'amount 59'
+p133
+aS'_DIAGNOSTICPROCESS 60'
+p134
+aS'_REASONING 60'
+p135
+aS'_BOOK 61'
+p136
+aS'isTitled 61'
+p137
+aS'hasType 61'
+p138
+aS'writtenBy 61'
+p139
+aS'_AUTHOR 62'
+p140
+aS'_MAXPRICE 63'
+p141
+aS'_QUANTITY 63'
+p142
+aS'_BOOK 64'
+p143
+aS'isTitled 64'
+p144
+aS'hasType 64'
+p145
+aS'writtenBy 64'
+p146
+aS'_PRICE 64'
+p147
+aS'currency 64'
+p148
+aS'amount 64'
+p149
+aS'_DESTINATION 65'
+p150
+aS'_HOTEL 65'
+p151
+aS'AcceptCostAndHealingPlan_CostAndHealingPlanAcceptanceAnswer 66'
+p152
+aS'UpdatePatientMedicalRecords_Acknowledgement 67'
+p153
+aS'GetPatientMedicalRecords_AuthorizedMedicalRecords 67'
+p154
+aS'_PUBLICATION 68'
+p155
+aS'publishedBy 68'
+p156
+aS'datePublished 68'
+p157
+aS'_RECOMMENDEDPRICE 68'
+p158
+aS'_AUTHOR 69'
+p159
+aS'_PRICE 69'
+p160
+aS'currency 69'
+p161
+aS'amount 69'
+p162
+aS'_AUTHOR 70'
+p163
+aS'_PREDICTING 71'
+p164
+aS'_PUBLICATION 72'
+p165
+aS'has-publication-reference 72'
+p166
+aS'cites-publication-reference 72'
+p167
+aS'_FOOD 73'
+p168
+aS'_QUALITY 73'
+p169
+aS'_AUTHOR 74'
+p170
+aS'_DISTANCE 75'
+p171
+aS'_LATITUDE 76'
+p172
+aS'_LONGITUDE 76'
+p173
+aS'_CITY 76'
+p174
+aS'hasAirport 76'
+p175
+aS'_COUNTRY 76'
+p176
+aS'hasGovernment 76'
+p177
+aS'hasCurrency 76'
+p178
+aS'countryID 76'
+p179
+aS'_MAP 77'
+p180
+aS'_LUXURYHOTEL 78'
+p181
+aS'luxuryHotelID 78'
+p182
+aS'hasRating 78'
+p183
+aS'_PREPAREDFOOD 79'
+p184
+aS'_QUANTITY 79'
+p185
+aS'GetNonMedicalFlightAccount_Account 80'
+p186
+aS'_ZIPCODE 81'
+p187
+aS'_CITY 82'
+p188
+aS'hasAirport 82'
+p189
+aS'_STATE 82'
+p190
+aS'_TIMEZONE 82'
+p191
+aS'_DAYLIGHTSAVINGTIME 82'
+p192
+aS'GetMedicalFlightAccount_Account 83'
+p193
+aS'_HOTEL 84'
+p194
+aS'_ADDRESS 85'
+p195
+aS'address-building 85'
+p196
+aS'address-street 85'
+p197
+aS'address-number 85'
+p198
+aS'address-country 85'
+p199
+aS'address-postcode 85'
+p200
+aS'address-city-or-village 85'
+p201
+aS'address-pretty-label 85'
+p202
+aS'address-area 85'
+p203
+aS'address-region 85'
+p204
+aS'_PUBLICATION 86'
+p205
+aS'has-publication-reference 86'
+p206
+aS'cites-publication-reference 86'
+p207
+aS'_FOOD 87'
+p208
+aS'_DESTINATION 88'
+p209
+aS'_ALTITUDE 89'
+p210
+aS'_LOCATION 89'
+p211
+aS'_GEOGRAPHIC-AREA 90'
+p212
+aS'southeastCorner 90'
+p213
+aS'northwestCorner 90'
+p214
+aS'_CITY 90'
+p215
+aS'hasAirport 90'
+p216
+aS'_COUNTRY 90'
+p217
+aS'hasGovernment 90'
+p218
+aS'hasCurrency 90'
+p219
+aS'countryID 90'
+p220
+aS'_DIAGNOSTICPROCESS 91'
+p221
+aS'_TIMEINTERVAL 91'
+p222
+aS'meetsTemporally 91'
+p223
+aS'finishes 91'
+p224
+aS'starts 91'
+p225
+aS'earlier 91'
+p226
+aS'BeginFn 91'
+p227
+aS'EndFn 91'
+p228
+aS'duration 91'
+p229
+aS'during 91'
+p230
+aS'_FOOD 92'
+p231
+aS'_DISTANCE 93'
+p232
+aS'BookNonMedicalFlight_SeatNumber 95'
+p233
+aS'BookNonMedicalFlight_AirportGate 95'
+p234
+aS'BookNonMedicalFlight_BookingNumber 95'
+p235
+aS'_DESTINATION 96'
+p236
+aS'_HOTEL 97'
+p237
+aS'_POSTAL-ADDRESS 99'
+p238
+aS'_LATITUDE 100'
+p239
+aS'_LONGITUDE 100'
+p240
+aS'_DISTANCE 100'
+p241
+aS'_WIKIPEDIA-ARTICLE 100'
+p242
+aS'_ADDRESS 101'
+p243
+aS'address-building 101'
+p244
+aS'address-street 101'
+p245
+aS'address-number 101'
+p246
+aS'address-country 101'
+p247
+aS'address-postcode 101'
+p248
+aS'address-city-or-village 101'
+p249
+aS'address-pretty-label 101'
+p250
+aS'address-area 101'
+p251
+aS'address-region 101'
+p252
+aS'SelectOtherHospital_SelectedHospital 102'
+p253
+aS'_LATITUDE 103'
+p254
+aS'_LONGITUDE 103'
+p255
+aS'_VICINITY-MAP 104'
+p256
+aS'_THUMBNAIL-MAP 104'
+p257
+aS'_ADDRESS 104'
+p258
+aS'_LATITUDE 104'
+p259
+aS'_LONGITUDE 104'
+p260
+aS'_MAPSIZE 104'
+p261
+aS'_PRICE 105'
+p262
+aS'currency 105'
+p263
+aS'amount 105'
+p264
+aS'_COUNTRYCODE_OUT 106'
+p265
+aS'_LONGITUDE 106'
+p266
+aS'_LATITUDE 106'
+p267
+aS'_POSTALCODE_OUT 106'
+p268
+aS'_PLACENAME_OUT 106'
+p269
+aS'_ZIPCODE 107'
+p270
+aS'_DISTANCE-TO-CITY 107'
+p271
+aS'BookNonMedicalTransport_SeatNumber 108'
+p272
+aS'BookNonMedicalTransport_BookingNumber 108'
+p273
+aS'GetNonMedicalTransportAccount_Account 110'
+p274
+aS'InformHospital_AcknowledgementResponse 111'
+p275
+aS'_RECOMMENDEDPRICE 112'
+p276
+aS'_GEOGRAPHIC-AREA 113'
+p277
+aS'southeastCorner 113'
+p278
+aS'northwestCorner 113'
+p279
+aS'_CITY 113'
+p280
+aS'hasAirport 113'
+p281
+aS'_COUNTRY 113'
+p282
+aS'hasGovernment 113'
+p283
+aS'hasCurrency 113'
+p284
+aS'countryID 113'
+p285
+aS'_TIMEZONE 113'
+p286
+aS'_DAYLIGHTSAVINGTIME 113'
+p287
+aS'_LATITUDE 114'
+p288
+aS'_LONGITUDE 114'
+p289
+aS'_PROFESSION 115'
+p290
+aS'_TIMEDURATION 115'
+p291
+aS'_PUBLISHER 116'
+p292
+aS'_AUTHOR 117'
+p293
+aS'_COMPANY 118'
+p294
+aS'_SKILLEDOCCUPATION 118'
+p295
+aS'_MATCHING-ADDRESS 119'
+p296
+aS'_LATITUDE 119'
+p297
+aS'_LONGITUDE 119'
+p298
+aS'_ADDRESS 120'
+p299
+aS'address-building 120'
+p300
+aS'address-street 120'
+p301
+aS'address-number 120'
+p302
+aS'address-country 120'
+p303
+aS'address-postcode 120'
+p304
+aS'address-city-or-village 120'
+p305
+aS'address-pretty-label 120'
+p306
+aS'address-area 120'
+p307
+aS'address-region 120'
+p308
+aS'_CITY 121'
+p309
+aS'cityID 121'
+p310
+aS'hasAccommodation 121'
+p311
+aS'_PUBLICATION 123'
+p312
+aS'has-publication-reference 123'
+p313
+aS'cites-publication-reference 123'
+p314
+aS'_AUTHOR 123'
+p315
+aS'_DISTANCE 124'
+p316
+aS'_DISTANCE 125'
+p317
+aS'_FAMILYDESTINATION 126'
+p318
+aS'hasAccommodation 126'
+p319
+aS'hasActivity 126'
+p320
+aS'ProvideMedicalTransportInformation_ListOfTransports 127'
+p321
+aS'ListOfTransports_consistsOf 127'
+p322
+aS'_RURALAREA 128'
+p323
+aS'_INVESTIGATING 129'
+p324
+aS'_STATE 130'
+p325
+aS'_LATITUDE 130'
+p326
+aS'_LONGITUDE 130'
+p327
+aS'_ACCOMMODATION 131'
+p328
+aS'BookMedicalFlight_AirportGate 132'
+p329
+aS'BookMedicalFlight_BookingNumber 132'
+p330
+aS'BookMedicalFlight_SeatNumber 132'
+p331
+aS'EBook 133'
+p332
+aS'isTitled 133'
+p333
+aS'hasType 133'
+p334
+aS'writtenBy 133'
+p335
+aS'CheckHospitalAvailability_AvailabilityResponse 134'
+p336
+aS'GetMedicalTransportAccount_Account 135'
+p337
+aS'_POSTALCODE 136'
+p338
+aS'_TEA 137'
+p339
+aS'_PRICE 137'
+p340
+aS'currency 137'
+p341
+aS'amount 137'
+p342
+aS'_LECTURER-IN-ACADEMIA 138'
+p343
+aS'_LOCATION 139'
+p344
+aS'_LATITUDE 139'
+p345
+aS'_LONGITUDE 139'
+p346
 a.

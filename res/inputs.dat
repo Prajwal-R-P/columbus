@@ -1,8 +1,834 @@
 (lp0
-S'_ACADEMIC-ITEM-NUMBER 1'
+S'_BOOK 1'
 p1
-aS'_ACADEMIC-ITEM-NUMBER 2'
+aS'isTitled 1'
 p2
-aS'_ACADEMIC 3'
+aS'hasType 1'
 p3
+aS'writtenBy 1'
+p4
+aS'_GEOGRAPHICAL-REGION 2'
+p5
+aS'_PERSON 3'
+p6
+aS'_BOOK 3'
+p7
+aS'isTitled 3'
+p8
+aS'hasType 3'
+p9
+aS'writtenBy 3'
+p10
+aS'_CREDITCARDACCOUNT 3'
+p11
+aS'_GEOGRAPHICAL-REGION 4'
+p12
+aS'_HIGHER-EDUCATIONAL-ORGANIZATION 6'
+p13
+aS'_BOOK 7'
+p14
+aS'isTitled 7'
+p15
+aS'hasType 7'
+p16
+aS'writtenBy 7'
+p17
+aS'_FOOD 8'
+p18
+aS'_CITY 9'
+p19
+aS'hasAirport 9'
+p20
+aS'_STATE 9'
+p21
+aS'PatientTransport_PatientGpsPosition 10'
+p22
+aS'UpdatePatientMedicalRecords_Treatment 10'
+p23
+aS'UpdatePatientMedicalRecords_PhysicianAuthorization 10'
+p24
+aS'UpdatePatientMedicalRecords_PhysicianPassword 10'
+p25
+aS'UpdatePatientMedicalRecords_PhysicianID 10'
+p26
+aS'UpdatePatientMedicalRecords_PatientHealthInsuranceNumber 10'
+p27
+aS'UpdatePatientMedicalRecords_Diagnosis 10'
+p28
+aS'UpdatePatientMedicalRecords_UsedDrugs 10'
+p29
+aS'UpdatePatientMedicalRecords_TreatmentDateTime 10'
+p30
+aS'_HOSPITAL 11'
+p31
+aS'_RECOMMENDEDPRICE 12'
+p32
+aS'_HOTEL 12'
+p33
+aS'_COUNTRY 13'
+p34
+aS'has-currency 13'
+p35
+aS'has-capital 13'
+p36
+aS'has-government 13'
+p37
+aS'_ADDRESS1 14'
+p38
+aS'_ADDRESS2 14'
+p39
+aS'_CITY1 14'
+p40
+aS'hasAirport 14'
+p41
+aS'_CITY2 14'
+p42
+aS'hasAirport 14'
+p43
+aS'_STATE1 14'
+p44
+aS'_STATE2 14'
+p45
+aS'_HOSPITAL 15'
+p46
+aS'_ACADEMIC 16'
+p47
+aS'works-for 16'
+p48
+aS'_ACADEMIC-ITEM-NUMBER 17'
+p49
+aS'CheckPersonnelAvailability_TreatmentRecomendation 18'
+p50
+aS'CheckHospitalAvailability_TreatmentRecomendation 18'
+p51
+aS'CheckEquipmentAvailability_TreatmentDate 18'
+p52
+aS'CheckEquipmentAvailability_TreatmentRecomendation 18'
+p53
+aS'_LICENSEKEY 19'
+p54
+aS'_ADDRESS 19'
+p55
+aS'_ISBN 21'
+p56
+aS'_FOOD 22'
+p57
+aS'_GEOGRAPHICAL-REGION 23'
+p58
+aS'_HOSPITAL 24'
+p59
+aS'_USCITY1 25'
+p60
+aS'hasAirport 25'
+p61
+aS'_USCITY2 25'
+p62
+aS'hasAirport 25'
+p63
+aS'_USSTATECODE1 25'
+p64
+aS'_USSTATECODE2 25'
+p65
+aS'_HOSPITAL 26'
+p66
+aS'_UNIVERSITY 27'
+p67
+aS'has-faculty 27'
+p68
+aS'has-vice-chancellor 27'
+p69
+aS'_HOSPITAL 28'
+p70
+aS'_CITY 29'
+p71
+aS'hasAirport 29'
+p72
+aS'_STATE 29'
+p73
+aS'_COUNTRY 29'
+p74
+aS'hasGovernment 29'
+p75
+aS'hasCurrency 29'
+p76
+aS'countryID 29'
+p77
+aS'_RETAILSTORESTORE 30'
+p78
+aS'_COUNTRY 31'
+p79
+aS'has-currency 31'
+p80
+aS'has-capital 31'
+p81
+aS'has-government 31'
+p82
+aS'_BEVERAGE 32'
+p83
+aS'_CITY 33'
+p84
+aS'cityAddress 33'
+p85
+aS'capitalCity 33'
+p86
+aS'_CITY 34'
+p87
+aS'_COUNTRY 34'
+p88
+aS'has-currency 34'
+p89
+aS'has-capital 34'
+p90
+aS'has-government 34'
+p91
+aS'_USERID 35'
+p92
+aS'_CITY 35'
+p93
+aS'hasAirport 35'
+p94
+aS'CheckHospitalAvailability_TreatmentRecomendation 36'
+p95
+aS'CheckRoomAvailability_TreatmentDate 36'
+p96
+aS'CheckRoomAvailability_TreatmentRecomendation 36'
+p97
+aS'_USERID 37'
+p98
+aS'_START-LATITUDE 37'
+p99
+aS'_START-LONGITUDE 37'
+p100
+aS'_END-LATITUDE 37'
+p101
+aS'_END-LONGITUDE 37'
+p102
+aS'_IMAGE-WIDTH 37'
+p103
+aS'_IMAGE-HEIGHT 37'
+p104
+aS'_LANGUAGE 37'
+p105
+aS'_CITY 39'
+p106
+aS'cityID 39'
+p107
+aS'hasAccommodation 39'
+p108
+aS'_COUNTRY 39'
+p109
+aS'has-currency 39'
+p110
+aS'has-capital 39'
+p111
+aS'has-government 39'
+p112
+aS'_DURATION 39'
+p113
+aS'durationID 39'
+p114
+aS'has-unit-of-measure 39'
+p115
+aS'_SHOPPINGMALL 40'
+p116
+aS'_UNIVERSITY 41'
+p117
+aS'has-faculty 41'
+p118
+aS'has-vice-chancellor 41'
+p119
+aS'BookMedicalFlight_FlightNumber 42'
+p120
+aS'BookMedicalFlight_Account 42'
+p121
+aS'ProvideMedicalFlightInformation_DesiredArrivalAirport 42'
+p122
+aS'ProvideMedicalFlightInformation_Diagnosis 42'
+p123
+aS'ProvideMedicalFlightInformation_DesiredTreatment 42'
+p124
+aS'ProvideMedicalFlightInformation_FlightCategory 42'
+p125
+aS'ProvideMedicalFlightInformation_DesiredDepartureDateTime 42'
+p126
+aS'ProvideMedicalFlightInformation_DesiredDepartureAirport 42'
+p127
+aS'_ADDRESS 44'
+p128
+aS'_CITY 44'
+p129
+aS'hasAirport 44'
+p130
+aS'_STATE 44'
+p131
+aS'_COUNTRY 44'
+p132
+aS'hasGovernment 44'
+p133
+aS'hasCurrency 44'
+p134
+aS'countryID 44'
+p135
+aS'_COUNTY 44'
+p136
+aS'_ZIPCODE 44'
+p137
+aS'_DISTRICT 44'
+p138
+aS'_LICENSEKEY 45'
+p139
+aS'_ADDRESS 45'
+p140
+aS'_CITY 45'
+p141
+aS'hasAirport 45'
+p142
+aS'_STATE 45'
+p143
+aS'_COUNTRY 45'
+p144
+aS'hasGovernment 45'
+p145
+aS'hasCurrency 45'
+p146
+aS'countryID 45'
+p147
+aS'CheckCostAndHealingPlan_PatientHealthInsuranceNumber 46'
+p148
+aS'CheckCostAndHealingPlan_CostAndHealingPlan 46'
+p149
+aS'ProvideMedicalTransportInformation_DesiredTransportVehicle 47'
+p150
+aS'BookMedicalTransport_Account 47'
+p151
+aS'BookMedicalTransport_TransportNumber 47'
+p152
+aS'_USERID 48'
+p153
+aS'_LATITUDE 48'
+p154
+aS'_LONGITUDE 48'
+p155
+aS'_CAREORGANIZATION 49'
+p156
+aS'_EDUCATIONAL-EMPLOYEE 50'
+p157
+aS'works-for 50'
+p158
+aS'_GEOGRAPHICAL-REGION 51'
+p159
+aS'_ACADEMIC-ITEM-NUMBER 52'
+p160
+aS'_BEVERAGE 53'
+p161
+aS'_STREET 54'
+p162
+aS'_CITY 54'
+p163
+aS'hasAirport 54'
+p164
+aS'_STATE 54'
+p165
+aS'_COUNTRY 54'
+p166
+aS'hasGovernment 54'
+p167
+aS'hasCurrency 54'
+p168
+aS'countryID 54'
+p169
+aS'_POSTALCODE 54'
+p170
+aS'_RESEARCHER 55'
+p171
+aS'_USERID 56'
+p172
+aS'_LATITUDE 56'
+p173
+aS'_LONGITUDE 56'
+p174
+aS'_GROCERYSTORE 57'
+p175
+aS'_COUNTRY 58'
+p176
+aS'has-currency 58'
+p177
+aS'has-capital 58'
+p178
+aS'has-government 58'
+p179
+aS'_CITY 58'
+p180
+aS'cityID 58'
+p181
+aS'hasAccommodation 58'
+p182
+aS'_ENCYCLOPEDIA 59'
+p183
+aS'hasSize 59'
+p184
+aS'_TITLE 61'
+p185
+aS'_ENCYCLOPEDIA 62'
+p186
+aS'hasSize 62'
+p187
+aS'_FOOD 63'
+p188
+aS'_AUTHOR 64'
+p189
+aS'_COUNTRY 65'
+p190
+aS'has-currency 65'
+p191
+aS'has-capital 65'
+p192
+aS'has-government 65'
+p193
+aS'_CITY 65'
+p194
+aS'cityID 65'
+p195
+aS'hasAccommodation 65'
+p196
+aS'AcceptCostAndHealingPlan_CostAndHealingPlan 66'
+p197
+aS'PatientTransport_PatientGpsPosition 67'
+p198
+aS'UpdatePatientMedicalRecords_Treatment 67'
+p199
+aS'GetPatientMedicalRecords_AuthorizationEndTime 67'
+p200
+aS'GetPatientMedicalRecords_PatientHealthInsuranceNumber 67'
+p201
+aS'GetPatientMedicalRecords_PhysicianID 67'
+p202
+aS'GetPatientMedicalRecords_PhysicianPassword 67'
+p203
+aS'_AUTHOR 68'
+p204
+aS'_BOOK 69'
+p205
+aS'isTitled 69'
+p206
+aS'hasType 69'
+p207
+aS'writtenBy 69'
+p208
+aS'_PUBLICATION 70'
+p209
+aS'publishedBy 70'
+p210
+aS'datePublished 70'
+p211
+aS'_CAREORGANIZATION 71'
+p212
+aS'_ISBN 72'
+p213
+aS'_RETAILSTORE 73'
+p214
+aS'_BOOK 74'
+p215
+aS'isTitled 74'
+p216
+aS'hasType 74'
+p217
+aS'writtenBy 74'
+p218
+aS'_LATITUDE1 75'
+p219
+aS'_LONGITUDE1 75'
+p220
+aS'_LATITUDE2 75'
+p221
+aS'_LONGITUDE2 75'
+p222
+aS'_USERID 76'
+p223
+aS'_ZIPCODE 76'
+p224
+aS'_CENTER 77'
+p225
+aS'_IMAGE-SIZE 77'
+p226
+aS'hasAirport 77'
+p227
+aS'_FORMAT 77'
+p228
+aS'_MARKERS 77'
+p229
+aS'_PATH 77'
+p230
+aS'_LANGUAGE 77'
+p231
+aS'_MAP-SPAN 77'
+p232
+aS'_CITY 78'
+p233
+aS'_RETAILSTORE 79'
+p234
+aS'GetNonMedicalFlightAccount_CustomerDesiredAccountName 80'
+p235
+aS'BookNonMedicalFlight_Account 80'
+p236
+aS'BookNonMedicalFlight_FlightNumber 80'
+p237
+aS'GetNonMedicalFlightAccount_CustomerName 80'
+p238
+aS'GetNonMedicalFlightAccount_CustomerAddress 80'
+p239
+aS'GetNonMedicalFlightAccount_CustomerCreditCardNumber 80'
+p240
+aS'GetNonMedicalFlightAccount_CustomerDesiredPassword 80'
+p241
+aS'GetNonMedicalFlightAccount_CustomerCreditCardExpDate 80'
+p242
+aS'_LICENSEKEY 81'
+p243
+aS'_CITY 81'
+p244
+aS'hasAirport 81'
+p245
+aS'_STATE 81'
+p246
+aS'_LICENSEKEY 82'
+p247
+aS'_ZIPCODE 82'
+p248
+aS'GetMedicalFlightAccount_CustomerCreditCardNumber 83'
+p249
+aS'GetMedicalFlightAccount_CustomerName 83'
+p250
+aS'GetMedicalFlightAccount_CustomerCreditCardExpDate 83'
+p251
+aS'GetMedicalFlightAccount_CustomerDesiredPassword 83'
+p252
+aS'GetMedicalFlightAccount_CustomerDesiredAccountName 83'
+p253
+aS'GetMedicalFlightAccount_CustomerAddress 83'
+p254
+aS'_CITY 84'
+p255
+aS'_PROFESSOR-IN-ACADEMIA 85'
+p256
+aS'_PUBLICATION-NUMBER 86'
+p257
+aS'_GROCERYSTORE 87'
+p258
+aS'_HIKING 88'
+p259
+aS'_USERID 89'
+p260
+aS'_LATITUDE 89'
+p261
+aS'_LONGITUDE 89'
+p262
+aS'_USERID 90'
+p263
+aS'_ZIPCODE 90'
+p264
+aS'_HOSPITAL 91'
+p265
+aS'_LATITUDE1 93'
+p266
+aS'_LONGITUDE1 93'
+p267
+aS'_LATITUDE2 93'
+p268
+aS'_LONGITUDE2 93'
+p269
+aS'_DURATION 94'
+p270
+aS'durationID 94'
+p271
+aS'has-unit-of-measure 94'
+p272
+aS'_COUNTRY 94'
+p273
+aS'has-currency 94'
+p274
+aS'has-capital 94'
+p275
+aS'has-government 94'
+p276
+aS'_CITY 94'
+p277
+aS'cityID 94'
+p278
+aS'hasAccommodation 94'
+p279
+aS'BookNonMedicalFlight_Account 95'
+p280
+aS'BookNonMedicalFlight_FlightNumber 95'
+p281
+aS'_ACTIVITY 96'
+p282
+aS'_CAPITAL-CITY 97'
+p283
+aS'is-capital-of 97'
+p284
+aS'_COUNTRY 97'
+p285
+aS'has-currency 97'
+p286
+aS'has-capital 97'
+p287
+aS'has-government 97'
+p288
+aS'_CREDITCARDACCOUNT 98'
+p289
+aS'_BOOK 98'
+p290
+aS'isTitled 98'
+p291
+aS'hasType 98'
+p292
+aS'writtenBy 98'
+p293
+aS'_USER 98'
+p294
+aS'_EMPLOYEE 99'
+p295
+aS'works-for 99'
+p296
+aS'has-job-title 99'
+p297
+aS'works-in-unit 99'
+p298
+aS'has-contract-type 99'
+p299
+aS'_LICENSEKEY 100'
+p300
+aS'_RADIUS 100'
+p301
+aS'_MAX-RESULTS 100'
+p302
+aS'_LANGUAGE 100'
+p303
+aS'_POSTALCODE 100'
+p304
+aS'_COUNTRYCODE 100'
+p305
+aS'_RESEARCHER 101'
+p306
+aS'SelectOtherHospital_HospitalListFromEMA 102'
+p307
+aS'ListOfHospitals_consistsOf 102'
+p308
+aS'_LICENSEKEY 103'
+p309
+aS'_CITY 103'
+p310
+aS'hasAirport 103'
+p311
+aS'_STATE 103'
+p312
+aS'_LICENSEKEY 104'
+p313
+aS'_ADDRESS 104'
+p314
+aS'_CITY 104'
+p315
+aS'hasAirport 104'
+p316
+aS'_STATE 104'
+p317
+aS'_COUNTRY 104'
+p318
+aS'hasGovernment 104'
+p319
+aS'hasCurrency 104'
+p320
+aS'countryID 104'
+p321
+aS'_HONEY 105'
+p322
+aS'_LICENSEKEY 106'
+p323
+aS'_POSTALCODE 106'
+p324
+aS'_PLACENAME 106'
+p325
+aS'_COUNTRYCODE 106'
+p326
+aS'_LICENSEKEY 107'
+p327
+aS'_CITY 107'
+p328
+aS'hasAirport 107'
+p329
+aS'_STATE 107'
+p330
+aS'_COUNTRY 107'
+p331
+aS'hasGovernment 107'
+p332
+aS'hasCurrency 107'
+p333
+aS'countryID 107'
+p334
+aS'_WITHIN-DISTANCE 107'
+p335
+aS'BookNonMedicalTransport_TransportNumber 108'
+p336
+aS'BookNonMedicalTransport_Account 108'
+p337
+aS'_BOOK 109'
+p338
+aS'isTitled 109'
+p339
+aS'hasType 109'
+p340
+aS'writtenBy 109'
+p341
+aS'GetNonMedicalTransportAccount_CustomerCreditCardExpDate 110'
+p342
+aS'GetNonMedicalTransportAccount_CustomerAddress 110'
+p343
+aS'GetNonMedicalTransportAccount_CustomerName 110'
+p344
+aS'GetNonMedicalTransportAccount_CustomerDesiredPassword 110'
+p345
+aS'GetNonMedicalTransportAccount_CustomerDesiredAccountName 110'
+p346
+aS'GetNonMedicalTransportAccount_CustomerCreditCardNumber 110'
+p347
+aS'InformHospital_DiagnosedSymptoms 111'
+p348
+aS'InformHospital_PatientArrivalDateTime 111'
+p349
+aS'InformHospital_SelectedHospital 111'
+p350
+aS'_COFFEE 112'
+p351
+aS'_USERID 113'
+p352
+aS'_ZIPCODE 113'
+p353
+aS'_ADDRESS 114'
+p354
+aS'_CITY 114'
+p355
+aS'hasAirport 114'
+p356
+aS'_STATE 114'
+p357
+aS'_COUNTRY 115'
+p358
+aS'has-currency 115'
+p359
+aS'has-capital 115'
+p360
+aS'has-government 115'
+p361
+aS'_ENCYCLOPEDIA 116'
+p362
+aS'hasSize 116'
+p363
+aS'_COUNTRY 118'
+p364
+aS'_ADDRESS 119'
+p365
+aS'_ACADEMIC 120'
+p366
+aS'works-for 120'
+p367
+aS'_ACTIVITY 121'
+p368
+aS'_TITLE 122'
+p369
+aS'_ACADEMIC-ITEM-NUMBER 123'
+p370
+aS'_LATITUDE1 124'
+p371
+aS'_LONGITUDE1 124'
+p372
+aS'_LATITUDE2 124'
+p373
+aS'_LONGITUDE2 124'
+p374
+aS'_CITY1 125'
+p375
+aS'_CITY2 125'
+p376
+aS'_STATE1 125'
+p377
+aS'_STATE2 125'
+p378
+aS'_COUNTRY1 125'
+p379
+aS'_COUNTRY2 125'
+p380
+aS'_ACTIVITY 126'
+p381
+aS'ProvideMedicalTransportInformation_DesiredTransportVehicle 127'
+p382
+aS'ProvideMedicalTransportInformation_DesiredDepartureDateTime 127'
+p383
+aS'ProvideMedicalTransportInformation_Diagnosis 127'
+p384
+aS'ProvideMedicalTransportInformation_DepartureGpsPosition 127'
+p385
+aS'ProvideMedicalTransportInformation_DesiredTreatment 127'
+p386
+aS'ProvideMedicalTransportInformation_DestinationGpsPosition 127'
+p387
+aS'_ACTIVITY 128'
+p388
+aS'_CAREORGANIZATION 129'
+p389
+aS'_LICENSEKEY 130'
+p390
+aS'_ZIPCODE 130'
+p391
+aS'_CITY 131'
+p392
+aS'BookMedicalFlight_FlightNumber 132'
+p393
+aS'BookMedicalFlight_Account 132'
+p394
+aS'EBookRequest 133'
+p395
+aS'UserAccount 133'
+p396
+aS'CheckPersonnelAvailability_TreatmentRecomendation 134'
+p397
+aS'CheckHospitalAvailability_TreatmentRecomendation 134'
+p398
+aS'CheckHospitalAvailability_TreatmentDate 134'
+p399
+aS'ProvideMedicalTransportInformation_Diagnosis 135'
+p400
+aS'GetMedicalTransportAccount_CustomerDesiredPassword 135'
+p401
+aS'ProvideMedicalTransportInformation_DesiredDepartureDateTime 135'
+p402
+aS'GetMedicalTransportAccount_CustomerCreditCardExpDate 135'
+p403
+aS'GetMedicalTransportAccount_CustomerAddress 135'
+p404
+aS'GetMedicalTransportAccount_CustomerCreditCardNumber 135'
+p405
+aS'GetMedicalTransportAccount_CustomerDesiredAccountName 135'
+p406
+aS'GetMedicalTransportAccount_CustomerName 135'
+p407
+aS'_LICENSEKEY 136'
+p408
+aS'_RADIUS 136'
+p409
+aS'_MAX-RESULTS 136'
+p410
+aS'_LATITUDE 136'
+p411
+aS'_LONGITUDE 136'
+p412
+aS'_GROCERYSTORE 137'
+p413
+aS'_EDUCATIONAL-ORGANIZATION 138'
+p414
+aS'_LICENSEKEY 139'
+p415
+aS'_ADDRESS 139'
+p416
 a.

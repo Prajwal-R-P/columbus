@@ -1,4 +1,3 @@
-from lib.wsdl import Wsdl
 import networkx as nx
 import matplotlib.pyplot as plt
 import basic
@@ -18,13 +17,15 @@ class Plot():
 
     def show(self):
         for v in self.G:
-            self.node_size.append(1000)
+            self.node_size.append(500)
             if v in self.operation_nodes:
                 self.node_color.append(1.0)
-            else:
+            elif v in self.input_nodes:
                 self.node_color.append(2.0)
+            else:
+                self.node_color.append(3.0)
 
-        nx.draw(self.G,node_color=self.node_color,node_size=self.node_size,width=2,alpha=0.3,edge_color='b')
+        nx.draw(self.G,node_color=self.node_color,node_size=self.node_size,alpha=0.3,edge_color='b',font_size=8)
         plt.savefig("joker.png")
 
         plt.show()
@@ -61,8 +62,10 @@ class Plot():
                 new_node=self.node_name(node,id)
                 if not isInward:
                     self.G.add_edge(center,new_node)
+                    self.output_nodes.append(new_node)
                 else:
                     self.G.add_edge(new_node,center)
+                    self.input_nodes.append(new_node)
                 self.data_node_connect(new_node, nodes[node],isInward)
 
     def wsdl_connect(self,wsdl_input,wsdl_output):
@@ -88,20 +91,9 @@ class Plot():
                     print "DRAW",input_node, output_node
                     self.G.add_edge(self.node_name(output_node,wsdl_output.id),self.node_name(input_node,wsdl_input.id))
 
-    def node_name(self,name,id):
+    @staticmethod
+    def node_name(name,id):
         return name+" "+str(id)
-
-    def get_seed_nodes(self,feed,isInput):
-        result = []
-        if isInput:
-            nodes=self.input_nodes
-        else:
-            nodes=self.output_nodes
-
-        for node in nodes:
-            if Similarity(" ".join(node.split(" ")[:1]),feed):
-                result.append(node)
-        return result
 
     def save_sdg(self):
         _file=open(config.SDG,"w")
@@ -116,7 +108,7 @@ class Plot():
         _file=open(config.OUTPUT_NODES,"w")
         pickle.dump(self.output_nodes,_file)
 
-    def get_sdg(self):
+    def load_sdg(self):
         _file=open(config.SDG,"r")
         self.G=pickle.load(_file)
 
@@ -128,12 +120,6 @@ class Plot():
 
         _file=open(config.OUTPUT_NODES,"r")
         self.output_nodes=pickle.load(_file)
-
-    def get_subgraph(self,input_feed,output_feed):
-        input_seeds=self.get_seed_nodes(input_feed,True)
-        output_seeds=self.get_seed_nodes(output_feed,False)
-        subgraph=[]
-        self.H=self.G.subgraph(subgraph)
 
     #def search_node(self,node):
     #    for v in self.G.nodes():

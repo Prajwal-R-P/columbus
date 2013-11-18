@@ -58,13 +58,12 @@ class Similarity():
     def sentences(self,sentence1,sentence2):
         words1 = Similarity.get_tokens(sentence1)
         words2 = Similarity.get_tokens(sentence2)
-
         result = 0
 
         for word1 in words1:
             _max = 0
             for word2 in words2:
-                _max = max(self.words(word1,word2),_max)
+                _max = max(self.word(word1,word2),_max)
             result += _max
 
         if len(words1) > 0:
@@ -76,7 +75,7 @@ class Similarity():
         for word2 in words2:
             _max = 0
             for word1 in words1:
-                _max = max(self.words(word1,word2),_max)
+                _max = max(self.word(word1,word2),_max)
             result += _max
 
         if len(words2) > 0:
@@ -146,6 +145,14 @@ class Similarity():
         return filter(None,list(set(result)))
         # return filter(None,list(set(tokens)))
 
+    def word(self,word1,word2):
+        word1=word1.lower()
+        word2=word2.lower()
+        if word1==word2:
+            return 1.0
+        else:
+            return 0
+
     def get_from_db(self,string1,string2):
         connect=sqlite3.connect(DB)
         cursor=connect.cursor()
@@ -155,7 +162,6 @@ class Similarity():
             return None
         else:
             return float(data[0])
-
 
     def new_db_entry(self,string1,string2,distance):
         connect=sqlite3.connect(DB)
