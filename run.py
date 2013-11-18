@@ -24,6 +24,7 @@ plotter = Plot()
 #plotter.save_sdg()
 #print similarity.Similarity("_BOOK","book").value
 plotter.load_sdg()
-sub_plotter=SubPlotter(plotter,"author","book")
+sub_plotter=SubPlotter(plotter,"book","author")
 sub_plotter.show()
+
 #plotter.show()
