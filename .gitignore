@@ -2,3 +2,5 @@
 *.pyc
 *~
 run.py
+*.swp
+joker.png

@@ -14,14 +14,17 @@ class SubPlotter():
         self.input_seeds=self.get_seed_nodes(self.input_feeds,True)
         self.output_seeds=self.get_seed_nodes(self.output_feeds,False)
         self.visited=self.input_seeds[:]
+        self.not_visited=[]
         self.K=self.input_seeds[:]
         self.subgraph=self.get_sub_graph()
         self.H=self.plot.G.subgraph(self.subgraph)
 
     def show(self):
         for v in self.H:
-            self.node_size.append(500)
-            if v in self.plot.operation_nodes:
+            self.node_size.append(3000)
+            if v in self.not_visited:
+                self.node_color.append(4.0)
+            elif v in self.plot.operation_nodes:
                 self.node_color.append(1.0)
             elif v in self.plot.input_nodes:
                 self.node_color.append(2.0)
@@ -29,6 +32,7 @@ class SubPlotter():
                 self.node_color.append(3.0)
 
         nx.draw(self.H,node_color=self.node_color,node_size=self.node_size,alpha=0.3,edge_color='b',font_size=8)
+
         plt.savefig("joker.png")
         plt.show()
 
@@ -64,12 +68,12 @@ class SubPlotter():
     def get_graph_nodes(self):
         leaf=[]
         graph_nodes=[]
-        print  self.visited
+        #print  self.visited
         for feed in self.output_feeds:
             for node in self.output_seeds:
                 if node in self.visited and Similarity(feed,self.name_from_node(node)).value > config.threshold:
                     leaf.append(node)
-        print leaf
+        #print leaf
         for node in leaf:
             graph_nodes.append(node)
             self.add_parents(node,graph_nodes)
@@ -81,9 +85,16 @@ class SubPlotter():
             return
         for node in self.nodes_to_node(src):
             if node in self.visited:
-                print node
+                #print node
                 graph_nodes.append(node)
                 self.add_parents(node,graph_nodes)
+
+            # add children of operation nodes which are not visited
+            if node in self.plot.operation_nodes:
+                for child in self.nodes_from_node(node):
+                    if child not in graph_nodes:
+                        graph_nodes.append(child)
+                        self.not_visited.append(child)
 
     def is_complete(self):
         visited_feeds=set()
@@ -93,7 +104,6 @@ class SubPlotter():
                 if Similarity(feed,self.name_from_node(visited)).value > config.threshold and visited in self.plot.output_nodes:
                     visited_feeds.add(feed)
         #print Similarity("book",self.name_from_node("_BOOK 19"))
-        print  len(visited_feeds),len(self.output_feeds)
         return len(visited_feeds) == len(self.output_feeds)
 
     def get_seed_nodes(self,feeds,isInput):
