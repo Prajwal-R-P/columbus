@@ -9,7 +9,7 @@ python:
   - pypy
   
 install:
-  - apt-get install nltk textblob wordnet sqlite3
+  - sudo apt-get install nltk textblob wordnet sqlite3
 
 # Make folders for the reports
 before_script:
